@@ -5,18 +5,25 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <header> <%-include('./navBar.ejs')%></header>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <body> <div style="margin-top: 10%" class="content">
+    <ul class="flex">
+        <li>
+            
+                  <a class="htitle" href="/categories/women">WOMEN</a>
+              
+        </li>
+        <li>
+           
+                  <a class="htitle" href="/categories/men">MEN</a>
+            
+        </li>
 
+    </ul>
+    </div>
 
-    <%=category %>
-    <%=category %>
-    
-    
     </body>
 
-  <footer>
+  <footer id="footer">
     OSF Digital, August 2022
   </footer>
 </html>

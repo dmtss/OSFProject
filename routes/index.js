@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const axios = require('axios').default;
-
 /* GET home page. */
 
 /*
@@ -19,7 +18,6 @@ function useFetch() {
   return data;
 }*/
 
-
 router.get('/',async function (req, res, next) {
   try{
   res.status(200).render("main", {
@@ -30,6 +28,7 @@ router.get('/',async function (req, res, next) {
   return next(err)
 }
 });
+
 
 
 module.exports = router;

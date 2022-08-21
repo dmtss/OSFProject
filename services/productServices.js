@@ -1,55 +1,44 @@
-require('dotenv').config() 
+const _         = require("underscore");
+const axios = require("axios").create({baseUrl: "https://osf-digital-backend-academy.herokuapp.com/api/"});
+require('dotenv').config();
+const api_key=process.env.API_KEY;
+
   exports.womensService=async function(){
-    const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/womens?secretKey='+process.env.API_KEY)
-    .then(resp => {
-        return resp
-    })
-    .catch(err => {
-        console.error(err);
+    const response = await axios({
+        url: "http://osf-digital-backend-academy.herokuapp.com/api/categories/parent/womens?secretKey="+api_key,
+        method: "get",
     });
-      return response
+    return response;
 }
 
   exports.womensClothingService=async function(){
-        const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/womens-clothing?secretKey='+process.env.API_KEY)
-        .then(resp => {
-              return resp
-          })
-          .catch(err => {
-              console.error(err);
-          });
-          return response
+    const response = await axios({
+        url: "http://osf-digital-backend-academy.herokuapp.com/api/categories/parent/womens-clothing?secretKey="+api_key,
+        method: "get",
+    });
+          return response;
   }
 
   exports.womensJewelryService=async function(){
-    const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/womens-jewelry?secretKey='+process.env.API_KEY)
-    .then(resp => {
-        return resp
-    })
-    .catch(err => {
-        console.error(err);
+    const response = await axios({
+        url: "http://osf-digital-backend-academy.herokuapp.com/api/categories/parent/womens-jewelry?secretKey="+api_key,
+        method: "get",
     });
-      return response
+      return response;
 }
 
   exports.mensService=async function(){
-    const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens?secretKey='+process.env.API_KEY)
-    .then(resp => {
-        return resp
-    })
-    .catch(err => {
-        console.error(err);
+    const response = await axios({
+        url: "http://osf-digital-backend-academy.herokuapp.com/api/categories/parent/mens?secretKey="+api_key,
+        method: "get",
     });
-      return response
+      return response;
 }
 
   exports.mensClothingService=async function(){
-    const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-clothing?secretKey='+process.env.API_KEY)
-    .then(resp => {
-        return resp
-    })
-    .catch(err => {
-        console.error(err);
+    const response = await axios({
+        url: "http://osf-digital-backend-academy.herokuapp.com/api/categories/parent/mens-clothing?secretKey="+api_key,
+        method: "get",
     });
-      return response
+      return response;
 }
