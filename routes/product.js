@@ -10,7 +10,6 @@ router.get('/', function (req, res, next) {
     try{
      res.status(200).render("main", {
         title: "Alibazon",
-        parentcategory: "got",
     })
   } catch (err) {
     err.status=500
@@ -18,9 +17,18 @@ router.get('/', function (req, res, next) {
   }
   });
   
+
+  router.get('/categories', function (req, res, next) {
+    try{
+     res.status(200).render("categories", {
+        title: "Alibazon",
+    })
+  } catch (err) {
+    err.status=500
+    return next(err)
+  }
+  });
 //PRODUCTS
-
-
 
 router.get('/men',productController.menController)
 router.get('/women',productController.womenController)
