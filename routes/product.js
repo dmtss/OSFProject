@@ -5,20 +5,25 @@ require('dotenv').config();
 const productController=require('../controllers/productController')
 
 
-router.get('/',async function (req, res, next) {
-    try {
-        await res.redirect("/categories/women")
-    }catch (err){
-        res.status(500).json({message: err});
-    }
-})
+
+router.get('/', function (req, res, next) {
+    try{
+     res.status(200).render("main", {
+        title: "Alibazon",
+        parentcategory: "got",
+    })
+  } catch (err) {
+    err.status=500
+    return next(err)
+  }
+  });
+  
 //PRODUCTS
+
+
 
 router.get('/men',productController.menController)
 router.get('/women',productController.womenController)
-
-
-    
 
 //CART
 

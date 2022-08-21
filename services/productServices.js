@@ -8,7 +8,7 @@ const api_key=process.env.API_KEY;
         url: "http://osf-digital-backend-academy.herokuapp.com/api/categories/parent/womens?secretKey="+api_key,
         method: "get",
     });
-    return response;
+    return 0;
 }
 
   exports.womensClothingService=async function(){
@@ -32,7 +32,7 @@ const api_key=process.env.API_KEY;
         url: "http://osf-digital-backend-academy.herokuapp.com/api/categories/parent/mens?secretKey="+api_key,
         method: "get",
     });
-      return response;
+      return 0;
 }
 
   exports.mensClothingService=async function(){

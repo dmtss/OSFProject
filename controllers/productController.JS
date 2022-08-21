@@ -1,13 +1,13 @@
 const productServices=require('../services/productServices')
 
 
-exports.menController=async function (req, res, next) {
+exports.menController= function (req, res, next) {
     try {
-        const response = await productServices.mensService()
-        res.status(200).render("index", {
-            _: _,
+        // 
+      //  const response = await productServices.mensService()
+        res.status(200).render("main", {
             title: "Alibazon",
-            items: response.data,
+           // items: response.data,
             category:"Mens",
             parentcategory:"Men",
             varlink:"men"
@@ -20,13 +20,12 @@ exports.menController=async function (req, res, next) {
 
 }
 
-exports.womenController=async function (req, res, next) {
+exports.womenController= function (req, res, next) {
     try {
-        const response = await productServices.womensService()
-        res.status(200).render("index", {
-            _: _,
+        //const response = await productServices.womensService()
+        res.status(200).render("main", {
             title: "Alibazon",
-            items: response.data,
+            //items: response.data,
             category:"Womens",
             parentcategory:"Women",
             varlink:"women"

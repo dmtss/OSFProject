@@ -18,17 +18,6 @@ function useFetch() {
   return data;
 }*/
 
-router.get('/',async function (req, res, next) {
-  try{
-  res.status(200).render("main", {
-      title: "Alibazon",
-  })
-} catch (err) {
-  err.status=500
-  return next(err)
-}
-});
-
 
 
 module.exports = router;
