@@ -5,6 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <div id="container">
+
   <header> <%-include('./navBar.ejs')%></header>
   <body>  <h1>title</h1>
     <div class="content">
@@ -12,11 +13,12 @@
         
     <h1><a href="/categories/<%=varlink%>"><%=category %></a> / <a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>"><%=parentcategory %></a></h1>
 
+<h1>HELLO WORLD THIS IS A TEST</h1>
     <ul>
 
     <% items.forEach(function(parentC) { %>
       <li>
-          <h1><a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>/<%=parentC.name.toLowerCase()%>"><%= parentC.name %></a></h1>
+          <h1><a href="/categories/<%=varlink%>/<%=parentC.name.toLowerCase()%>"><%= parentC.name %></a></h1>
           <p><%= parentC.page_description %></p>
           <% if (parentC.image) { %>
           <div>
@@ -24,6 +26,7 @@
           </div>
           
         
+
           <% } %>
           <div>
               
@@ -37,6 +40,5 @@
       OSF Digital, August 2022
     </footer>
     </body>
-
   </div>
 </html>

@@ -148,7 +148,7 @@ exports.mensTiesController= async function (req, res, next) {
     try {
         
         const response = await productServices.mensTiesService()
-        res.status(200).render("subcategories", {
+        res.status(200).render("products", {
             title: "Alibazon",
             items: response.data,
             category:"Mens",
@@ -168,7 +168,7 @@ exports.mensLuggageController= async function (req, res, next) {
     try {
         
         const response = await productServices.mensLuggageService()
-        res.status(200).render("subcategories", {
+        res.status(200).render("products", {
             title: "Alibazon",
             items: response.data,
             category:"Mens",
@@ -188,7 +188,7 @@ exports.mensGlovesController= async function (req, res, next) {
     try {
         
         const response = await productServices.mensGlovesService()
-        res.status(200).render("subcategories", {
+        res.status(200).render("products", {
             title: "Alibazon",
             items: response.data,
             category:"Mens",
@@ -208,7 +208,7 @@ exports.mensDressController= async function (req, res, next) {
     try {
         
         const response = await productServices.mensDressService()
-        res.status(200).render("subcategories", {
+        res.status(200).render("products", {
             title: "Alibazon",
             items: response.data,
             category:"Mens",
@@ -228,7 +228,7 @@ exports.mensShortsController= async function (req, res, next) {
     try {
         
         const response = await productServices.mensShortsService()
-        res.status(200).render("subcategories", {
+        res.status(200).render("products", {
             title: "Alibazon",
             items: response.data,
             category:"Mens",
@@ -247,7 +247,7 @@ exports.mensJacketsController= async function (req, res, next) {
     try {
         
         const response = await productServices.mensJacketsService()
-        res.status(200).render("subcategories", {
+        res.status(200).render("products", {
             title: "Alibazon",
             items: response.data,
             category:"Mens",
@@ -267,7 +267,7 @@ exports.mensPantsController= async function (req, res, next) {
     try {
         
         const response = await productServices.mensPantsService()
-        res.status(200).render("subcategories", {
+        res.status(200).render("products", {
             title: "Alibazon",
             items: response.data,
             category:"Mens",
@@ -286,7 +286,7 @@ exports.mensSuitsController= async function (req, res, next) {
     try {
         
         const response = await productServices.mensSuitsService()
-        res.status(200).render("subcategories", {
+        res.status(200).render("products", {
             title: "Alibazon",
             items: response.data,
             category:"Mens",
