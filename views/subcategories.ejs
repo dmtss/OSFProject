@@ -7,8 +7,11 @@
   <header> <%-include('./navBar.ejs')%></header>
   <body>  <h1>title</h1>
     <div style="margin-top: 10%" class="content">
-    <h1><a href="/categories/<%=varlink%>"><%=category %></a></h1>
+   
         
+    <h1><a href="/categories/<%=varlink%>"><%=category %></a> / <a href="/categories/<%=varlink%>"><%=parentcategory %></a></h1>
+
+<h1>HELLO WORLD THIS IS A TEST</h1>
     <ul>
     <% items.forEach(function(topC) { %>
       <li>
