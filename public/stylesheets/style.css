@@ -11,6 +11,7 @@ body {
     flex-direction: column;
 	margin: 0;
 	grid-template-rows: auto 1fr auto;
+
 }
 
 #container {
@@ -125,7 +126,6 @@ a:hover {
 	box-sizing: border-box;
 	color: #666;
 	font-size: 1.6em;
-	line-height: 1.4em;
 	margin: 20px auto;
 	padding: 20px;
 	width: 100%;

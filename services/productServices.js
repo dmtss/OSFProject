@@ -1,5 +1,6 @@
 require('dotenv').config();
-const axios = require("axios").create({baseUrl: "https://osf-digital-backend-academy.herokuapp.com/api/"});
+const axios = require('axios').create({baseUrl: 'https://backend-academy-osf.herokuapp.com/api/'});
+
 const api_key=process.env.API_KEY;
 
   exports.womensService=async function(){
@@ -62,7 +63,7 @@ exports.womensAccessoriesService=async function(){
 
 //MENS ACCESSORIES
 exports.mensAccessoriesService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-accessories?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-accessories?secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -73,7 +74,7 @@ exports.mensAccessoriesService=async function(){
 }
 
 exports.mensLuggageService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-accessories-luggage?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=mens-accessories-luggage&secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -84,7 +85,7 @@ exports.mensLuggageService=async function(){
 }
 
 exports.mensGlovesService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-accessories-gloves?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=mens-accessories-gloves&secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -95,7 +96,7 @@ exports.mensGlovesService=async function(){
 }
 
 exports.mensTiesService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-accessories-ties?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=mens-accessories-ties&secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -107,7 +108,7 @@ exports.mensTiesService=async function(){
 
 //MENS CLOTHING
 exports.mensClothingService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-clothing?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-clothing?secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -118,7 +119,7 @@ exports.mensClothingService=async function(){
 }
 
 exports.mensDressService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-clothing-dress-shirts?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=mens-clothing-dress-shirts&secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -130,7 +131,7 @@ exports.mensDressService=async function(){
 
 
 exports.mensShortsService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-clothing-shorts?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=mens-clothing-shorts&secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -142,7 +143,7 @@ exports.mensShortsService=async function(){
 
 
 exports.mensJacketsService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-clothing-jackets?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=mens-clothing-jackets&secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -153,7 +154,7 @@ exports.mensJacketsService=async function(){
 }
 
 exports.mensPantsService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-clothing-pants?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=mens-clothing-pants&secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -164,7 +165,7 @@ exports.mensPantsService=async function(){
 }
 
 exports.mensSuitsService=async function(){
-  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens-clothing-suits?secretKey=$2a$08$P1.onBEj0ZcAysZdw9Rjae.is2nr2quNp3EtXhhSfpSLpN6IenoWG')
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=mens-clothing-suits&secretKey='+api_key)
   .then(resp => {
       return resp
   })
@@ -173,3 +174,315 @@ exports.mensSuitsService=async function(){
   });
     return response;
 }
+
+//WOMENS CLOTHING
+exports.womensTopsService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-clothing-tops&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensBottomsService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-clothing-bottoms&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensJacketsService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-clothing-jackets&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensDressesService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-clothing-dresses&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensRedService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-clothing-feeling-red&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensOutfitsService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-clothing-outfits&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+//WOMENS ACCESSORIES
+exports.womensShoesService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-accessories-shoes&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensScarvesService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-accessories-scarves&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+//WOMENS JEWELRY
+
+exports.womensNecklacesService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-jewelry-necklaces&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+
+exports.womensBraceletsService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-jewelry-bracelets&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+
+exports.womensEarringsService=async function(){
+  const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/products/product_search?primary_category_id=womens-jewelry-earrings&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+
+// WOMEN PRODUCTS
+
+exports.womensEarringsProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+
+exports.womensNecklacesProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensScarvesProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.param.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+    console.log(req.params.productid);
+
+   console.error(err);
+  });
+    return response;
+}
+
+exports.womensShoesProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+
+exports.womensDressesProduct=async function(){
+  const response = await axios.get("http://backend-academy-osf.herokuapp.com/api/products/product_search?id="+req.params.productid+"&secretKey="+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensJacketsProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensBottomsProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.womensTopsProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+//MEN PRODUCTS 
+exports.mensLuggageProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+
+
+exports.mensGlovesProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.mensTiesProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.mensDressProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.mensShortsProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.mensJacketsProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.mensPantsProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+
+exports.mensSuitsProduct=async function(){
+  const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
+  .then(resp => {
+      return resp
+  })
+  .catch(err => {
+      console.error(err);
+  });
+    return response;
+}
+

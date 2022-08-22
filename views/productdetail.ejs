@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/products.css' />
+
+  </head>
+  <div id="container">
+
+  <header> <%-include('./navBar.ejs')%></header>
+  <body>  <h1>title</h1>
+    <div class="content">  
+        <div class="detailwrapper">  
+    <h1><a href="/categories/<%=varlink%>"><%=category %></a> / <a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>"><%=parentcategory %></a></h1>
+
+    <% items.forEach(function(parentC) { %>
+        <div class="detailcard"> 
+        <img src="/images/<%=parentC.image_groups[0].images[0].link%>"/> 
+          <div class="contents">
+          <p><a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>/<%=parentC.id%>"><%=parentC.name%>  </a></p>
+          Description: <%=parentC.long_description%>
+          <br><br>
+          Price: <%=parentC.price%> 
+            <%=parentC.currency%>
+            </div>
+        </div>
+    <% }); %>
+    </div></div>
+
+    <footer id="footer">
+      OSF Digital, August 2022
+    </footer>
+    </body>
+  </div>
+</html>
