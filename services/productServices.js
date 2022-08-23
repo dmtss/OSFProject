@@ -303,7 +303,7 @@ exports.womensEarringsService=async function(){
 
 // WOMEN PRODUCTS
 
-exports.womensEarringsProduct=async function(){
+exports.womensEarringsProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -315,7 +315,7 @@ exports.womensEarringsProduct=async function(){
 }
 
 
-exports.womensNecklacesProduct=async function(){
+exports.womensNecklacesProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -326,7 +326,7 @@ exports.womensNecklacesProduct=async function(){
     return response;
 }
 
-exports.womensScarvesProduct=async function(){
+exports.womensScarvesProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.param.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -339,7 +339,7 @@ exports.womensScarvesProduct=async function(){
     return response;
 }
 
-exports.womensShoesProduct=async function(){
+exports.womensShoesProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -351,7 +351,7 @@ exports.womensShoesProduct=async function(){
 }
 
 
-exports.womensDressesProduct=async function(){
+exports.womensDressesProduct=async function(req){
   const response = await axios.get("http://backend-academy-osf.herokuapp.com/api/products/product_search?id="+req.params.productid+"&secretKey="+api_key)
   .then(resp => {
       return resp
@@ -362,7 +362,7 @@ exports.womensDressesProduct=async function(){
     return response;
 }
 
-exports.womensJacketsProduct=async function(){
+exports.womensJacketsProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -373,7 +373,7 @@ exports.womensJacketsProduct=async function(){
     return response;
 }
 
-exports.womensBottomsProduct=async function(){
+exports.womensBottomsProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -384,7 +384,7 @@ exports.womensBottomsProduct=async function(){
     return response;
 }
 
-exports.womensTopsProduct=async function(){
+exports.womensTopsProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -396,7 +396,7 @@ exports.womensTopsProduct=async function(){
 }
 
 //MEN PRODUCTS 
-exports.mensLuggageProduct=async function(){
+exports.mensLuggageProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -409,7 +409,7 @@ exports.mensLuggageProduct=async function(){
 
 
 
-exports.mensGlovesProduct=async function(){
+exports.mensGlovesProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -420,7 +420,7 @@ exports.mensGlovesProduct=async function(){
     return response;
 }
 
-exports.mensTiesProduct=async function(){
+exports.mensTiesProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -431,7 +431,7 @@ exports.mensTiesProduct=async function(){
     return response;
 }
 
-exports.mensDressProduct=async function(){
+exports.mensDressProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -442,7 +442,7 @@ exports.mensDressProduct=async function(){
     return response;
 }
 
-exports.mensShortsProduct=async function(){
+exports.mensShortsProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -453,7 +453,7 @@ exports.mensShortsProduct=async function(){
     return response;
 }
 
-exports.mensJacketsProduct=async function(){
+exports.mensJacketsProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -464,7 +464,7 @@ exports.mensJacketsProduct=async function(){
     return response;
 }
 
-exports.mensPantsProduct=async function(){
+exports.mensPantsProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp
@@ -475,7 +475,7 @@ exports.mensPantsProduct=async function(){
     return response;
 }
 
-exports.mensSuitsProduct=async function(){
+exports.mensSuitsProduct=async function(req){
   const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?id='+req.params.productid+'&secretKey='+api_key)
   .then(resp => {
       return resp

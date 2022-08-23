@@ -60,14 +60,6 @@ router.get('/women/accessories/scarves',productController.womensScarvesControlle
 router.get('/women/accessories/shoes',productController.womensShoesController)
 router.get("/women/accessories/scarves/:productid",productController.womensScarvesProductController)
 router.get('/women/accessories/shoes/:productid',productController.womensShoesProductController)
-
-router.get('/women/accessories/scarves/:productid', function(req, res) {
-  const productid = req.params.productid;
-  res.send({
-    'productid': productid
-  });
-  productController.womensScarvesProductController();
-});
 //CART
 
 

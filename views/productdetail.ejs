@@ -12,7 +12,7 @@
   <body>  <h1>title</h1>
     <div class="content">  
         <div class="detailwrapper">  
-    <h1><a href="/categories/<%=varlink%>"><%=category %></a> / <a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>"><%=parentcategory %></a></h1>
+    <h1><a href="/categories/<%=varlink%>"><%=category %></a> / <a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>"><%=parentcategory %></a><a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>"><%=items.name%></a></h1>
 
     <% items.forEach(function(parentC) { %>
         <div class="detailcard"> 
@@ -23,6 +23,8 @@
           <br><br>
           Price: <%=parentC.price%> 
             <%=parentC.currency%>
+            <br>
+            <button class="buynow"><a href="/"></a>Buy Now</button>
             </div>
         </div>
     <% }); %>
