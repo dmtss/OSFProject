@@ -6,7 +6,6 @@ body {
 	color: #eee;
 	font-family: 'Lato', sans-serif;
 	font-size: 62.5%;
-	padding: 0 20px;
 	display: flex;
     flex-direction: column;
 	margin: 0;
@@ -46,26 +45,27 @@ a:hover {
 
 
 }
+
 #header {
-	position:absolute;
 	background-color: #fff;
 	top: 0;
 	left: 0;
 	right: 0;
+	margin-bottom: 8em;
+	position: absolute;
 }
 
-.links {
-	display: grid;
-	grid-template-columns: repeat(var(--items), 1fr);
-	position: relative;
-}
 
 .links {
 	background-color: #fff;
 	border-bottom: 1px solid #0003;
 	box-shadow: 0 0 32px #0003;
 	font-size: 2em;
+	width: 100%;
 	font-weight: 300;
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: absolute;
 }
 .links > a {
 	color: rgb(141, 141, 141);
@@ -79,14 +79,27 @@ a:hover {
 	color: rgb(195, 183, 255);
 	}
 
-.links > #title {
-    color: #ff4411; 
-    font-size: 2em; 
-    font-family: 'Signika', sans-serif; 
-  }
+.topNav {
+	background-color: #fff;
+	border-bottom: 1px solid #0003;
+	box-shadow: 0 0 32px #0003;
+	font-size: 2em;
+	font-weight: 300;
+	position: absolute;
+	height: 5em;
+	width: 100%;
+}
+
+.title-container {
+	width: 3em;
+	margin-left: 10%;
+	justify-content: left;
+}
 
 .underline{
   position: relative;
+  font-size: 1.2em;
+  color: #eee;
 }
 
 .underline::before{
@@ -100,6 +113,7 @@ a:hover {
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
     left: 0;
@@ -108,16 +122,16 @@ a:hover {
   }
 }
 
+
 #footer {
 		background: rgb(66, 66, 66);
-		min-width: max-content;
 		font-size: 1.5em;
 		text-align: center;
 		padding-top: 3em;
 		height: 5em;
-
-
-	  
+		bottom: 0;
+		top: 100%;
+		width: 100%;
 }
 
 .content {
@@ -130,10 +144,80 @@ a:hover {
 	padding: 20px;
 	width: 100%;
 	max-width: 90%;
-	margin-top: 2%;
+	margin-top: 8%;
 	flex-grow: 1;
 }
 .content ul {
 	margin: 2.5em 2em;
 	padding: 0;
 }
+
+div {
+    display: block;
+}
+
+.topnav {
+	width: 100%;
+	position: absolute;
+	background-color: Black;
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+	height: 5em;
+ }
+
+ .navcontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+ .nav-link {
+	display: inline-block;
+	width: 80px;
+	height: 55px;
+	color: White;
+	text-align: center;    /* horizontally */
+	line-height: 55px;     /* vertically */
+	text-decoration: none;
+ }
+
+ #logo {
+	width: 15%;
+	color: #c9afff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size:2em;
+ }
+
+ #about {
+	margin-left: 8em;
+}
+
+input{
+	background-color: white;
+	border: 1px solid black;
+	margin-left: 10%;
+	margin-right: 1%;
+	width: 20%;
+	color: #111;
+	font-size: 15px;
+	height: 2em;    
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  }
+
+
+.navbar {
+  display: flex;
+  box-shadow: 0 0 2px 0 grey;
+  align-items: center;
+  font-size: 2em;
+  background-color:#a2a2a2;
+  background-color: var(--theme-bg-color);
+  
+  color: white;
+  color: var(--theme-color);
+  
+
+}
+
+
+/* AUTH STARTS HERE */

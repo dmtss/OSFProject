@@ -11,4 +11,22 @@ router.get('/',async function (req, res, next) {
   }
 })
 
+router.get('/signup',function(req, res, next){
+  return res.render('signup', {});
+});
+
+router.get('/signin',function(req, res, next){
+  return res.render('signin', {
+    title: 'Sign In'
+  });
+});
+
+router.get('/profile',function(req, res, next){
+  return res.render('profile', {
+    title: 'Profile'
+  });
+});
+
+
+
 module.exports = router;

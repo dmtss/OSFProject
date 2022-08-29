@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+    <% function get_action(form) { %>
+        <%form.action = document.getElementById("inp").value; }%>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+<div class="header">
+    <div class="topnav">
+            <a id="logo" class="nav-link" href="/">Alibazon</a>
+            <a href="/categories/women" class="underline">Women</a> -
+            <a href="/categories/men" class="underline">Men</a>
+            <input type="text" id="inp" placeholder="Search" onsubmit="get_action(form)" method="get"><button type="submit">Search</button>
+            <a id="about" class="nav-link" href="/signup">Sign Up</a>
+            <a id="about" class="nav-link" href="#">Wishlist</a>
+            <a id="about" class="nav-link" href="#">Cart</a>
+           
+    </div>
+
+</div>
+
+
+
+</html>

@@ -902,3 +902,20 @@ exports.mensSuitsProductController=async (req, res, next) => {
     }
 
 }
+
+
+exports.productSearchController=async (req, res, next) => {
+    try {
+        req.params.productname
+        const response = await productServices.searchProduct(req)
+        res.status(200).render("search",{
+            title:"Alibazon",
+            items:response.data,
+        })
+    } catch (err) {
+        err=new Error("couldn't get data from the endpoint")
+        err.status=500
+        return next(err)
+    }
+
+}

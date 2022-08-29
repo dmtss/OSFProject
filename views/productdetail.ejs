@@ -6,10 +6,10 @@
     <link rel='stylesheet' href='/stylesheets/products.css' />
 
   </head>
-  <div id="container">
 
-  <header> <%-include('./navBar.ejs')%></header>
-  <body>  <h1>title</h1>
+  <header><%-include('./navbar2.ejs')%></header>
+
+  <body>
     <div class="content">  
         <div class="detailwrapper">  
     <h1><a href="/categories/<%=varlink%>"><%=category %></a> / <a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>"><%=parentcategory %></a><a href="/categories/<%=varlink%>/<%=parentcategory.toLowerCase()%>"><%=items.name%></a></h1>
@@ -24,15 +24,23 @@
           Price: <%=parentC.price%> 
             <%=parentC.currency%>
             <br>
-            <button class="buynow"><a href="/"></a>Buy Now</button>
+
+              <select>
+                <option value="0">Select quantity:</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+           <button class="buynow"><a href="/"></a>Buy Now</button>
             </div>
         </div>
     <% }); %>
     </div></div>
 
+    
+    </body>
     <footer id="footer">
       OSF Digital, August 2022
     </footer>
-    </body>
-  </div>
 </html>

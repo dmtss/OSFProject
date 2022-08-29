@@ -11,6 +11,8 @@ router.get('/',async function (req, res, next) {
       res.status(500).json({message: err});
   }
 })
+
+
 //PRODUCTS
 
 router.get('/men',productController.menController)
@@ -60,6 +62,14 @@ router.get('/women/accessories/scarves',productController.womensScarvesControlle
 router.get('/women/accessories/shoes',productController.womensShoesController)
 router.get("/women/accessories/scarves/:productid",productController.womensScarvesProductController)
 router.get('/women/accessories/shoes/:productid',productController.womensShoesProductController)
+
+
+router.get('/search/:productname',productController.productSearchController)
+
+//USER
+
+
+
 //CART
 
 

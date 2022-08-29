@@ -486,3 +486,15 @@ exports.mensSuitsProduct=async function(req){
     return response;
 }
 
+//SEARCH FOR PRODUCTS 
+exports.searchProduct=async function(req){
+    const response = await axios.get('http://backend-academy-osf.herokuapp.com/api/products/product_search?name='+req.params.productname+'&secretKey='+api_key)
+    .then(resp => {
+        return resp
+    })
+    .catch(err => {
+        console.error(err);
+    });
+      return response;
+  }
+  
