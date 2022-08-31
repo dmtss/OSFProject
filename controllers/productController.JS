@@ -17,7 +17,6 @@ exports.womenController=async function (req, res, next) {
         err.status=500
         return next(err)
     }
-
 }
 
 
