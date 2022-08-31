@@ -11,8 +11,7 @@ const Tracing = require("@sentry/tracing");
 const indexRouter = require('./routes/index');
 const productRouter = require('./routes/product');
 const authRouter = require('./routes/auth');
-const port=process.env.PORT || 80;
-
+const port = Process.env.PORT || 3000 ;
 
 const app = express();
 
@@ -61,11 +60,8 @@ app.use(function(err, req, res, next) {
 });
 
 
-
-
 app.listen(port,()=>{
-	console.log("Express Server Listening on port 80");
-  console.log
+	console.log("Express Server Listening on port 3000");
 });
 
 
