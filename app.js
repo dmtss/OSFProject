@@ -7,9 +7,9 @@ const logger = require('morgan');
 const session=require('express-session');
 const Sentry = require('@sentry/node');
 const Tracing = require("@sentry/tracing");
-const indexRouter = require('./routes/index');
-const productRouter = require('./routes/product');
-const authRouter = require('./routes/auth');
+const indexRouter = require('./routes/index.js');
+const productRouter = require('./routes/product.js');
+const authRouter = require('./routes/auth.js');
 const port = process.env.PORT || 80 ;
 
 const app = express();
