@@ -1,7 +1,6 @@
 const express = require("express")
   , http    = require("http")
-  , path    = require("path")
-  , routes  = require("./routes");
+  , path    = require("path");
 const cookieParser = require('cookie-parser');
 const bodyParser=require('body-parser');
 const logger = require('morgan');
