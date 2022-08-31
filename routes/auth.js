@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 require('dotenv').config();
-const userController=require("../controllers/userController")
+const userController=require("../controllers/userController.js")
 
 router.get('/signup',userController.getSignup)
 router.post('/signup',userController.postSignup)

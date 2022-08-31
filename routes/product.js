@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const axios = require('axios').default;
 require('dotenv').config();
-const productController=require('../controllers/productController')
+const productController=require('../controllers/productController.js')
 
 
 

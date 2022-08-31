@@ -1,4 +1,4 @@
-const userServices=require('../services/userServices')
+const userServices=require('../services/userServices.js')
 
 
 exports.getSignup=async function (req, res, next) {

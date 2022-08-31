@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const axios = require('axios').default;
-const userController=require('../controllers/userController')
+const userController=require('../controllers/userController.js')
 
 
 router.get('/',async function (req, res, next) {
