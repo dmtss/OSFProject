@@ -11,7 +11,7 @@ const Tracing = require("@sentry/tracing");
 const indexRouter = require('./routes/index');
 const productRouter = require('./routes/product');
 const authRouter = require('./routes/auth');
-const port = Process.env.PORT || 80 ;
+const port = process.env.PORT || 80 ;
 
 const app = express();
 
