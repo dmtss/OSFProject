@@ -27,13 +27,14 @@ exports.postSigninServices=async function(req){
   const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/auth/signin",user);
   req.session.token=response.data.token;
   req.session.userid=response.data.user._id;
-  req.session.userName=response.data.user.name
+  req.session.userName=response.data.user.name;
   req.session.email=response.data.user.email;
+  console.log(req.session)
 }
 
 exports.getCartServices=async function(req){
   const config = {
-      headers: {Authorization: `Bearer ${req.session.token}`}
+    header: {'Authorization': 'Bearer '+req.session.token}
   }
   const response = await axios.get("http://backend-academy-osf.herokuapp.com/api/cart?secretKey="+api_key, config);
   return response
@@ -51,21 +52,24 @@ exports.getProductFromCartServices=async function(req){
 
 exports.addToCartServices=async function (req){
   const config = {
-      headers: { Authorization: `Bearer ${req.session.token}` }
+    header: {'Authorization': 'Bearer '+req.session.token}
   }
-  const cart = {
-      "secretKey": api_key,
-      "productId": req.body.productID,
-      "quantity": "1"
-  }
-  const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/cart/addItem", cart, config);
+   const cart = {
+    "secretKey": api_key,
+    "productId": req.body.productID,
+    "quantity": "1"
+}
+  const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/cart/addItem/"+req.params.productID, cart, config);
 
 }
 
 
 exports.removeFromCartServices = async function (req){
   const response = await axios.delete("http://backend-academy-osf.herokuapp.com/api/cart/removeItem", {
-    headers: { Authorization: `Bearer ${req.session.token}` }  }, { data: { "secretKey": api_key, "productId": req.params.productid }}
+    header: {'Authorization': 'Bearer '+req.session.token}  }, { data: {
+      "secretKey": api_key,
+      "productId": req.params.productid,
+  }}
   );
 
 }
@@ -74,7 +78,7 @@ exports.removeFromCartServices = async function (req){
 exports.changeQuantityCartServices = async function(req){
 
 const config = {
-  headers: { Authorization: `Bearer ${req.session.token}` }
+  header: {'Authorization': 'Bearer '+req.session.token}
 }
 const quantity = {
   "secretKey": api_key,
@@ -84,7 +88,61 @@ const quantity = {
 const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/cart/changeItemQuantity", quantity, config);
 return response;
 }
+ 
+/* 
+exports.getCartServices=async function(req){
+  const config = {
+      headers: {Authorization: `Bearer ${req.session.token}`}
+  }
+  const response = await axios.get("http://backend-academy-osf.herokuapp.com/api/cart?secretKey="+api_key, config);
+  return response
+
+}
+
+exports.postCartServices=async function (req){
+  const config = {
+      headers: { Authorization: `Bearer ${req.session.token}` }
+  }
+  const cart = {
+      "productId": req.body.productID,
+      "quantity": "1"
+  }
+  const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/cart/addItem?secretKey="+api_key, cart, config);
+}
 
 
+exports.getCartProductServices=async function(req){
+  req.params.productid
+  const response = await axios({
+      url: "http://backend-academy-osf.herokuapp.com/api/products/product_search?id="+req.params.productid+"&secretKey="+api_key,
+      method: "get",
+  });
+  return response;
+}
+
+exports.removeCartItemServices=async function(req){
+
+  const response = await axios.delete("http://backend-academy-osf.herokuapp.com/api/cart/addItem?secretKey="+api_key,{
+      headers: { Authorization: `Bearer ${req.session.token}`},
+      data: {
+          "productId": req.params.productid,
+      }
+  })
+
+}
+
+exports.changeQuantityServices=async function(req){
+  const config = {
+      headers: { Authorization: `Bearer ${req.session.token}` }
+  }
+  const quantity = {
+      "productId": req.params.productid,
+      "quantity":  req.params.quantity
+  }
+  const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/cart/addItem?secretKey="+api_key,quantity,config)
+  return response
+}
+
+ */
 
 

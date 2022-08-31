@@ -1,16 +1,22 @@
-var createError = require('http-errors');
-var express = require('express');
-var session = require('express-session')
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-//const bodyParser = require('body-parser');
-var indexRouter = require('./routes/index');
-var productRouter = require('./routes/product');
-var authRouter = require('./routes/auth');
+const express = require("express")
+  , http    = require("http")
+  , path    = require("path")
+  , routes  = require("./routes");
+const cookieParser = require('cookie-parser');
+const bodyParser=require('body-parser');
+const logger = require('morgan');
+const session=require('express-session');
+const Sentry = require('@sentry/node');
+const Tracing = require("@sentry/tracing");
+const indexRouter = require('./routes/index');
+const productRouter = require('./routes/product');
+const authRouter = require('./routes/auth');
+const port=process.env.PORT || 80;
 
 
-var app = express();
+const app = express();
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -19,24 +25,29 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser("61d333a8-6325-4506-96e7-a180035cc26f"));
+app.use(session({secret:"61d333a8-6325-4506-96e7-a180035cc26f", resave: true, saveUninitialized: false}));
+app.use(function(req, res, next) {
+  res.locals.userId = req.session.userid;
+  next();
+}); 
+
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(bodyParser.json());
-app.use(session({
-  secret: 'demedo',
-  resave: true,
-  saveUninitialized: false
-}));
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
 
 app.use('/', indexRouter);
 app.use('/categories', productRouter);
 app.use('/auth', authRouter);
 
 
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -49,4 +60,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+
+
+
+app.listen(port,()=>{
+	console.log("Express Server Listening on port 80");
+  console.log
+});
+
+
+

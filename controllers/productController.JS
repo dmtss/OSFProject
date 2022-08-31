@@ -12,7 +12,6 @@ exports.womenController=async function (req, res, next) {
             parentcategory:"Women",
             varlink:"women"
         })
-        console.log(response.data)
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -33,7 +32,6 @@ exports.womensClothingController=async function (req, res, next) {
             parentcategory:"Clothing",
             varlink:"women"
         })
-        console.log(response.data)
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -54,7 +52,6 @@ exports.womensBottomsController= async function (req, res, next) {
             varlink:"women",
             name: "bottoms"
         })
-        console.log(response.data)
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -75,7 +72,6 @@ exports.womensJacketsController= async function (req, res, next) {
             varlink:"women",
             name: "jackets"
         })
-        console.log(response.data)
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -97,7 +93,7 @@ exports.womensDressesController= async function (req, res, next) {
             name: "dresses"
 
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -118,7 +114,7 @@ exports.womensRedController= async function (req, res, next) {
             varlink:"women",
             name: "feeling-red"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -139,7 +135,7 @@ exports.womensOutfitsController= async function (req, res, next) {
             varlink:"women",
             name: "outfits"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -160,7 +156,7 @@ exports.womensTopsController= async function (req, res, next) {
             varlink:"women",
             name: "tops"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -181,7 +177,7 @@ exports.womensJewelryController=async function (req, res, next) {
             parentcategory:"Jewelry",
             varlink:"women"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -202,7 +198,7 @@ exports.womensAccessoriesController=async function (req, res, next) {
             parentcategory:"Accessories",
             varlink:"women"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -223,7 +219,7 @@ exports.womensScarvesController=async function (req, res, next) {
             varlink:"women",
             name: "scarves"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -244,7 +240,7 @@ exports.womensShoesController=async function (req, res, next) {
             varlink:"women",
             name: "shoes"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -264,7 +260,7 @@ exports.womensEarringsController=async function (req, res, next) {
             varlink:"women",
             name: "earrings"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -285,7 +281,7 @@ exports.womensBraceletsController=async function (req, res, next) {
             varlink:"women",
             name: "bracelets"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -305,7 +301,7 @@ exports.womensNecklacesController=async function (req, res, next) {
             varlink:"women",
             name: "necklaces"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -328,7 +324,7 @@ exports.menController= async function (req, res, next) {
             parentcategory:"Men",
             varlink:"men"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -346,7 +342,7 @@ exports.mensClothingController= async function (req, res, next) {
             parentcategory:"Clothing",
             varlink:"men"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -366,7 +362,7 @@ exports.mensAccessoriesController= async function (req, res, next) {
             parentcategory:"Accessories",
             varlink:"men"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -387,7 +383,7 @@ exports.mensTiesController= async function (req, res, next) {
             varlink:"men",
             name: "ties"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -408,7 +404,7 @@ exports.mensLuggageController= async function (req, res, next) {
             varlink:"men",
             name: "luggage"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -429,7 +425,7 @@ exports.mensGlovesController= async function (req, res, next) {
             varlink:"men",
             name: "gloves"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -450,7 +446,7 @@ exports.mensDressController= async function (req, res, next) {
             varlink:"men",
             name: "dress-shirts"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -471,7 +467,7 @@ exports.mensShortsController= async function (req, res, next) {
             varlink:"men",
             name: "shorts"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -491,7 +487,7 @@ exports.mensJacketsController= async function (req, res, next) {
             varlink:"men",
             name: "jackets"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -512,7 +508,7 @@ exports.mensPantsController= async function (req, res, next) {
             varlink:"men",
             name: "pants"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -532,7 +528,7 @@ exports.mensSuitsController= async function (req, res, next) {
             varlink:"men",
             name: "suits"
         })
-        console.log(response.data)
+        
     } catch (err) {
         err=new Error("Couldn't get data from the endpoint")
         err.status=500
@@ -554,8 +550,7 @@ exports.womensEarringsProductController=async (req, res, next) => {
             category:"Womens",
             parentcategory:"Jewelry",
             varlink:"women",
-            type:"Earrings",
-            variants:response.data[0].variants
+            type:"Earrings"
         })
     } catch (err) {
         err=new Error("couldn't get data from the endpoint")
@@ -575,8 +570,7 @@ exports.womensNecklacesProductController=async (req, res, next) => {
             category:"Womens",
             parentcategory:"Jewelry",
             varlink:"women",
-            type:"Necklaces",
-            variants:response.data[0].variants
+            type:"Necklaces"
 
 
         })
@@ -597,8 +591,7 @@ exports.womensScarvesProductController=async (req, res, next) => {
             category:"Womens",
             parentcategory:"Accessories",
             varlink:"women",
-            type:"Scarves",
-            variants:response.data[0].variants
+            type:"Scarves"
 
 
         })
@@ -619,9 +612,8 @@ exports.womensShoesProductController=async (req, res, next) => {
             category:"Womens",
             parentcategory:"Accessories",
             varlink:"women",
-            type:"Shoes",
-            variants:response.data[0].variants
-        })
+            type:"Shoes"
+                   })
     } catch (err) {
         err=new Error("couldn't get data from the endpoint")
         err.status=500
@@ -639,9 +631,8 @@ exports.womensDressesProductController=async (req, res, next) => {
             category:"Womens",
             parentcategory:"Clothing",
             varlink:"women",
-            type:"Dresses",
-            variants:response.data[0].variants
-        })
+            type:"Dresses"
+                   })
     } catch (err) {
         err=new Error("couldn't get data from the endpoint")
         err.status=500
@@ -659,9 +650,7 @@ exports.womensJacketsProductController=async (req, res, next) => {
             category:"Womens",
             parentcategory:"Clothing",
             varlink:"women",
-            type:"Jackets & Coats",
-            variants:response.data[0].variants
-
+            type:"Jackets & Coats"
 
         })
     } catch (err) {
@@ -683,8 +672,7 @@ exports.womensBottomsProductController=async (req, res, next) => {
             parentcategory:"Clothing",
             varlink:"women",
             type:"Bottoms",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {
@@ -706,8 +694,7 @@ exports.womensTopsProductController=async (req, res, next) => {
             parentcategory:"Clothing",
             varlink:"women",
             type:"Tops",
-            variants:response.data[0].variants
-        })
+                   })
     } catch (err) {
         err=new Error("couldn't get data from the endpoint")
         err.status=500
@@ -727,8 +714,7 @@ exports.mensLuggageProductController=async (req, res, next) => {
             parentcategory:"Accessories",
             varlink:"men",
             type:"Luggages",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {
@@ -750,8 +736,7 @@ exports.mensGlovesProductController=async (req, res, next) => {
             parentcategory:"Accessories",
             varlink:"men",
             type:"Gloves",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {
@@ -773,8 +758,7 @@ exports.mensTiesProductController=async (req, res, next) => {
             parentcategory:"Accessories",
             varlink:"men",
             type:"Ties",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {
@@ -796,8 +780,7 @@ exports.mensDressProductController=async (req, res, next) => {
             parentcategory:"Clothing",
             varlink:"men",
             type:"Dress Shirts",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {
@@ -819,8 +802,7 @@ exports.mensShortsProductController=async (req, res, next) => {
             parentcategory:"Clothing",
             varlink:"men",
             type:"Shorts",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {
@@ -842,8 +824,7 @@ exports.mensJacketsProductController=async (req, res, next) => {
             parentcategory:"Clothing",
             varlink:"men",
             type:"Jackets & Coats",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {
@@ -867,8 +848,7 @@ exports.mensPantsProductController=async (req, res, next) => {
             parentcategory:"Clothing",
             varlink:"men",
             type:"Pants",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {
@@ -891,8 +871,7 @@ exports.mensSuitsProductController=async (req, res, next) => {
             parentcategory:"Clothing",
             varlink:"men",
             type:"Suits",
-            variants:response.data[0].variants
-
+           
 
         })
     } catch (err) {

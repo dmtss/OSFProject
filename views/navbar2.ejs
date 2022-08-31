@@ -8,13 +8,18 @@
             <a href="/categories/women" class="underline">Women</a> -
             <a href="/categories/men" class="underline">Men</a>
             <input type="text" id="inp" placeholder="Search" onsubmit="get_action(form)" method="get"><button type="submit">Search</button>
-          
-            <a id="about" class="nav-link" href="/signup">Sign Up</a>
-            <a id="about" class="nav-link" href="/profile">Profile</a>
-            <a id="about" class="nav-link" href="/logout">Logout</a>
-            <a id="about" class="nav-link" href="#">Wishlist</a>
-            <a id="about" class="nav-link" href="#">Cart</a>
-           
+            
+            <%if(typeof userId !== 'undefined'){%>
+                <a id="about" class="nav-link" href="/profile">Profile</a>
+                <a id="about" class="nav-link" href="/logout">Logout</a>
+                <a id="about" class="nav-link" href="/cart">Cart</a>
+                <%}else{%>
+                 <a id="about" class="nav-link" href="/signin">Sign In</a>
+                <a id="about" class="nav-link" href="/signup">Sign Up</a>
+                <a id="about" class="nav-link" href="/cart">Cart</a>
+
+                <%}%>
+
     </div>
 
 </div>

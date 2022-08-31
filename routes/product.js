@@ -3,7 +3,6 @@ var router = express.Router();
 const axios = require('axios').default;
 require('dotenv').config();
 const productController=require('../controllers/productController')
-const userController=require('../controllers/userController')
 
 
 
@@ -69,7 +68,6 @@ router.get('/women/accessories/shoes/:productid',productController.womensShoesPr
 
 router.get('/search/:productname',productController.productSearchController)
 
-//USER
 
 
 module.exports = router;

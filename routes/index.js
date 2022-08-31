@@ -22,13 +22,18 @@ router.get('/signin',function(req, res, next){
   });
 });
 
-router.get('/cart',userController.cartController)
-router.get('/cart',userController.cartAddItemController)
-router.get('/cart/:productid',userController.cartGetItemController)
-router.get('/cart/remove/:productid',userController.cartRemoveItemController)
-router.get('/cart/changeQuantity/:productid/:quantity',userController.cartItemQuantityController)
+
+
+
 router.get('/profile',userController.profileController)
 router.get('/logout',userController.logoutController)
+
+
+router.get('/cart',userController.cartController)
+router.post('/cart/add',userController.cartAddItemController)
+router.get('/cart/:productid',userController.cartGetItemController)
+router.get('/cart/remove/:productid',userController.cartRemoveItemController )
+router.get('/cart/changeItemQuantity/:productid/:quantity',userController.cartItemQuantityController)
 
 
 module.exports = router;

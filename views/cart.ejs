@@ -6,31 +6,28 @@
   </head>
   <header><%-include('./navbar2.ejs')%></header>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
     <div class="content">
         <div>
             <h1>Your Cart:</h1>
         </div>
-        <%if(items !== undefined){%>
+        <%if(typeof items !== "undefined"){%>
         <ul>
             <div>
                 <h1>Summary</h1>
             </div>
-            <% _.each(items.items, function(topC) { %>
-            <li id="<%=topC.productId%>">
-                <div class="card"" id="<%=topC.variant.product_id%>">
+            <% items.forEach(function(topC) { %>
+            <li id="<%=topC.productID%>">
+                <div class="detailcard">
                     <div>
                         <img class="img" id="img" src="" alt="">
                     </div>
                     <div>
                         <p></p>
-                    <p style="float: bottom; margin-top: 10%; " class="longDescription"></p>
+                    <p style="float: bottom; margin-top: 10%; "></p>
                     </div>
                     <div style="position: absolute; bottom: 5%;">
-                        <p  class="price_text"><b>Price:</b> <%=topC.price%> $ </p>
-                        <form action="/cart/remove/<%=topC.productId%>" method="GET">
+                        <p><b>Price:</b> <%=topC.price%> $ </p>
+                        <form action="/cart/remove/<%=topC.productID%>" method="GET">
                         <button>Remove</button>
                             <div class="d-inline-block  float-right big-margined">
                             <label for="quantity">Quantity:</label>
