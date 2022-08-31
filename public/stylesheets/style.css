@@ -1,4 +1,4 @@
-html, body { min-height: 100%; }
+html { min-height: max-content;}
 
 body {
 	background-color: rgb(226, 226, 226);
@@ -124,13 +124,11 @@ a:hover {
 
 
 #footer {
-		background: rgb(66, 66, 66);
+		background: rgb(0, 0, 0);
 		font-size: 1.5em;
 		text-align: center;
 		padding-top: 3em;
 		height: 5em;
-		bottom: 0;
-		top: 100%;
 		width: 100%;
 }
 
@@ -146,6 +144,7 @@ a:hover {
 	max-width: 90%;
 	margin-top: 8%;
 	flex-grow: 1;
+	min-height: calc(100vh - 40px);
 }
 .content ul {
 	margin: 2.5em 2em;
@@ -188,7 +187,7 @@ div {
  }
 
  #about {
-	margin-left: 8em;
+	margin-left: 2em;
 }
 
 input{

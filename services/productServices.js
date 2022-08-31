@@ -49,7 +49,6 @@ exports.womensAccessoriesService=async function(){
 
 
   exports.mensService=async function(){
-    console.log(api_key)
     const response = await axios.get('https://backend-academy-osf.herokuapp.com/api/categories/parent/mens?secretKey='+api_key)
     .then(resp => {
         return resp
@@ -332,7 +331,6 @@ exports.womensScarvesProduct=async function(req){
       return resp
   })
   .catch(err => {
-    console.log(req.params.productid);
 
    console.error(err);
   });

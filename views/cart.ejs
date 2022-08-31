@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <header><%-include('./navbar2.ejs')%></header>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <div class="content">
+        <div>
+            <h1>Your Cart:</h1>
+        </div>
+        <%if(items !== undefined){%>
+        <ul>
+            <div>
+                <h1>Summary</h1>
+            </div>
+            <% _.each(items.items, function(topC) { %>
+            <li id="<%=topC.productId%>">
+                <div class="card"" id="<%=topC.variant.product_id%>">
+                    <div>
+                        <img class="img" id="img" src="" alt="">
+                    </div>
+                    <div>
+                        <p></p>
+                    <p style="float: bottom; margin-top: 10%; " class="longDescription"></p>
+                    </div>
+                    <div style="position: absolute; bottom: 5%;">
+                        <p  class="price_text"><b>Price:</b> <%=topC.price%> $ </p>
+                        <form action="/cart/remove/<%=topC.productId%>" method="GET">
+                        <button>Remove</button>
+                            <div class="d-inline-block  float-right big-margined">
+                            <label for="quantity">Quantity:</label>
+                            <input class="quantity" type="number"  id="quantity" name="quantity" min="0" max="" value="<%=topC.quantity%>">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <% }); %>
+        </ul>
+        <%}else{%>
+            <p>Your cart is empty</p>
+        <%}%>
+        
+        
+    </div>
+     
+    </body>
+
+    <footer id="footer">
+      OSF Digital, August 2022
+    </footer>
+</html>

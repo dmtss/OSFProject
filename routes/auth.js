@@ -9,6 +9,4 @@ router.get('/signin',userController.getSignin)
 router.post('/signin',userController.postSignin)
 
 
-
-
 module.exports=router;

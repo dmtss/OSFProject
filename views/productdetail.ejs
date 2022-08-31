@@ -32,7 +32,12 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
               </select>
-           <button class="buynow"><a href="/"></a>Buy Now</button>
+
+              <form action="/cart" method="post">
+                <input type="hidden" id="productID" name="productID" value="<%=parentC.id%>"><br>
+                <button type="submit" class="button">Add to Cart</button>
+            </form>
+
             </div>
         </div>
     <% }); %>
