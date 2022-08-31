@@ -1,3 +1,5 @@
+require('dotenv').config();
+const api_key=process.env.API_KEY;
 const userServices=require('../services/userServices.js')
 
 
@@ -115,18 +117,18 @@ exports.cartController = async function (req,res,next) {
             try {
                 const response=await userServices.getCartServices(req);
                 res.status(200).render("cart",{
+                    secretKey: api_key,
                     title:"Alibazon",
                     items:response.data,
-                    secretKey:api_key
                 })
-
             } catch (err) {
                 err.status = 400;
                 return res.status(400).render("cart",{
+                    secretKey: api_key,
                     title:"Alibazon",
-                    items:undefined,
-                    secretKey:api_key
+                    items:undefined
                 });
+
             }
         } else {
             res.status(302).redirect('./signin')
@@ -144,7 +146,7 @@ exports.cartAddItemController =async function (req, res, next) {
         if (req.session.userid && req.session.token) {
             try {
                 await userServices.addToCartServices(req);
-                res.status(302).redirect('./cart');
+                res.status(302).redirect('back');
             }
             catch (err){
                 var err=new Error('Couldnt send the data to the endpoint');
@@ -166,7 +168,7 @@ exports.cartAddItemController =async function (req, res, next) {
 
 exports.cartGetItemController =async (req, res, next) => {
     try {
-        const response = await userServices.addToCartServices(req)
+        const response = await userServices.getProductFromCartServices(req)
         res.status(200).send(response.data)
     } catch (err) {
         err=new Error("couldn't send data to the endpoint")
@@ -186,7 +188,6 @@ exports.cartRemoveItemController =async (req, res, next) => {
             err.status=500
             return next(err)
         }
-
 }
 
 

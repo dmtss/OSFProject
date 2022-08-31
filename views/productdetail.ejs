@@ -33,8 +33,9 @@
                 <option value="4">4</option>
               </select>
 
-              <form action="/cart/add" method="post">
+              <form action="/cart" method="post">
                 <input type="hidden" id="productID" name="productID" value="<%=parentC.id%>"><br>
+                <input type="hidden" id="variantID" name="variantID" value="<%=parentC.variants[0].product_id%>"><br>
                 <button type="submit" class="button">Add to Cart</button>
             </form>
 

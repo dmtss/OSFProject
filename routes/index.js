@@ -30,10 +30,10 @@ router.get('/logout',userController.logoutController)
 
 
 router.get('/cart',userController.cartController)
-router.post('/cart/add',userController.cartAddItemController)
+router.post('/cart',userController.cartAddItemController)
 router.get('/cart/:productid',userController.cartGetItemController)
-router.get('/cart/remove/:productid',userController.cartRemoveItemController )
-router.get('/cart/changeItemQuantity/:productid/:quantity',userController.cartItemQuantityController)
+router.get('/cart/remove/:productid/:variantid',userController.cartRemoveItemController )
+router.get('/cart/changeItemQuantity/:productid/:variantid/:quantity',userController.cartItemQuantityController)
 
 
 module.exports = router;

@@ -29,20 +29,19 @@ exports.postSigninServices=async function(req){
   req.session.userid=response.data.user._id;
   req.session.userName=response.data.user.name;
   req.session.email=response.data.user.email;
-  console.log(req.session)
 }
 
 exports.getCartServices=async function(req){
   const config = {
-    header: {'Authorization': 'Bearer '+req.session.token}
-  }
+    headers: {Authorization: `Bearer ${req.session.token}`}
+}
+
   const response = await axios.get("http://backend-academy-osf.herokuapp.com/api/cart?secretKey="+api_key, config);
   return response
 }
 
 
 exports.getProductFromCartServices=async function(req){
-  req.params.productid
   const response = await axios({
       url: "http://backend-academy-osf.herokuapp.com/api/products/product_search?id="+req.params.productid+"&secretKey="+api_key,
       method: "get",
@@ -52,23 +51,25 @@ exports.getProductFromCartServices=async function(req){
 
 exports.addToCartServices=async function (req){
   const config = {
-    header: {'Authorization': 'Bearer '+req.session.token}
-  }
+    headers: {Authorization: `Bearer ${req.session.token}`}
+}
    const cart = {
     "secretKey": api_key,
     "productId": req.body.productID,
-    "quantity": "1"
+    "quantity": "1",
+    "variantId": req.body.variantID
 }
-  const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/cart/addItem/"+req.params.productID, cart, config);
+  const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/cart/addItem", cart, config);
 
 }
 
 
 exports.removeFromCartServices = async function (req){
   const response = await axios.delete("http://backend-academy-osf.herokuapp.com/api/cart/removeItem", {
-    header: {'Authorization': 'Bearer '+req.session.token}  }, { data: {
+    headers: {Authorization: `Bearer ${req.session.token}`}  }, { data: {
       "secretKey": api_key,
-      "productId": req.params.productid,
+      "productId": req.body.productID,
+      "variantId": req.body.variantID
   }}
   );
 
@@ -77,13 +78,14 @@ exports.removeFromCartServices = async function (req){
 
 exports.changeQuantityCartServices = async function(req){
 
-const config = {
-  header: {'Authorization': 'Bearer '+req.session.token}
+  const config = {
+    headers: {Authorization: `Bearer ${req.session.token}`}
 }
 const quantity = {
   "secretKey": api_key,
-  "productId": req.params.productid,
-  "quantity":  req.params.quantity
+  "productId": req.body.productID,
+  "variantId": req.body.variantID,
+  "quantity":  req.body.quantity
 }
 const response = await axios.post("http://backend-academy-osf.herokuapp.com/api/cart/changeItemQuantity", quantity, config);
 return response;
