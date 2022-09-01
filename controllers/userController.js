@@ -31,7 +31,7 @@ exports.postSignup=async function (req, res, next) {
             }
             try {
                 await userServices.postSignupServices(req)
-                return res.status(302).redirect("../signin")
+                return res.status(302).redirect("../profile")
             }
             catch (err){
                 var err=new Error('Couldnt send the data to the end-point');
